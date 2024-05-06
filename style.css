@@ -1,0 +1,298 @@
+*{
+    font-family: poppins, sans-serif;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.container{
+    font-size: 10px;
+    width: 50em;
+    height: 50em;
+    /* border: 1px solid red; */
+    position: relative;
+
+}
+
+.sun{
+    position: absolute;
+    width: 8em;
+    height: 8em;
+    top: 20em;
+    left: 20em;
+    background-color: #ffae00;
+    border-radius: 50%;
+    box-shadow: 0 0 10em #ffae00;
+    cursor: pointer;
+
+}
+.earth, .moon,.mercury,.venus,.mars,.jupiter,
+.saturn,.urenus,.neptune{
+    position: absolute;
+    border: 1px solid #e2e1e11f;
+    border-radius: 50%;
+    
+}
+.mercury{
+    top: 16.5em;
+    left: 16.5em;
+    width: 15em;
+    height: 15em;
+    /* border: 1px solid red; */
+    animation: orbit 4s linear infinite;
+}
+.venus{
+    top: 14em;
+    left: 14em;
+    width: 20em;
+    height: 20em;
+    /* border: 1px solid red; */
+    animation: orbit 20s linear infinite;
+}
+.earth{
+    top: 9em;
+    left: 9em;
+    width: 30em;
+    height: 30em;
+    /* border: 1px solid red; */
+    animation: orbit 30s linear infinite;
+
+}
+.moon{
+    top: 6.5em;
+    right: -1.5em;
+    width: 5em;
+    height: 5em;
+    animation: orbit 5s linear infinite;
+    /* border: 1px solid red; */
+
+}
+.mars{
+    top: 4em;
+    left: 4em;
+    width: 40em;
+    height:40em;
+    /* border: 1px solid red; */
+    animation: orbit 40s linear infinite;
+}
+.jupiter{
+    top: -1.25em;
+    left: -1.25em;
+    width: 50em;
+    height:50em;
+    /* border: 1px solid red; */
+    animation: orbit 50s linear infinite;
+}
+.saturn{
+    top: -9em;
+    left: -9em;
+    width: 65em;
+    height:65em;
+    /* border: 1px solid red; */
+    animation: orbit 60s linear infinite;
+}
+.urenus{
+    top: -14em;
+    left: -14em;
+    width: 75em;
+    height:75em;
+    /* border: 1px solid red; */
+    animation: orbit 80s linear infinite;
+}
+.neptune{
+    top: -19em;
+    left: -19em;
+    width: 85em;
+    height:85em;
+    /* border: 1px solid red; */
+    animation: orbit 100s linear infinite;
+
+}
+.earth::before, .moon::before, .mercury::before,
+.venus::before,.mars::before,.jupiter::before,
+.saturn::before,.urenus::before,.neptune::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    
+
+}
+.mercury::before{
+    top: 12em;
+    right:12.5em;
+    width: 1em;
+    height:1em;
+    background-color:  #e5e5e5;
+    box-shadow: 0 0 1em white;
+}
+.venus::before{
+    top: 10em;
+    right:-1em;
+    width: 2em;
+    height: 2em;
+    background-color: #8B7D82;
+    box-shadow: 0 0 1em #8B7D82;
+}
+.earth::before{
+    top: 8em;
+    right:0em;
+    width: 2em;
+    height: 2em;
+    background-color: #9fc164;
+    box-shadow: 0 0 1em #9fc164;
+    cursor: pointer;
+    
+    
+    
+}
+.moon::before{
+    top: 1em;
+    right: -0.3em;
+    width: 1em;
+    height: 1em;
+    background-color: #ccc;
+    box-shadow: 0 0 1em #ccc;
+
+}
+.mars::before{
+    top: -1.5em;
+    right:18em;
+    width: 3em;
+    height: 3em;
+    background-color: #C1440E ;
+    box-shadow: 0 0 1em #C1440E;
+}
+.jupiter::before{
+    top: 40em;
+    right:40em;
+    width: 5em;
+    height: 5em;
+    background-color: #c99039  ;
+    box-shadow: 0 0 1em #c99039;
+}
+.saturn::before{
+    top: 30em;
+    right:-2em;
+    width: 4em;
+    height: 4em;
+    background-color: #c4b08b  ;
+    box-shadow: 0 0 1em #c4b08b;
+}
+.urenus::before{
+    top: -1.5em;
+    right:35em;
+    width: 3em;
+    height: 3em;
+    background-color: #62aee7  ;
+    box-shadow: 0 0 1em #62aee7;
+}
+.neptune::before{
+    top: 30em;
+    right:82em;
+    width: 3em;
+    height: 3em;
+    background-color: #274687  ;
+    box-shadow: 0 0 1em #274687;
+}
+
+@keyframes orbit {
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+#info{
+    width: 300px;
+    /* height: 200px; */
+    /* background-color: #ccc; */
+    position: relative;
+    top: 125px;
+    left: 800px;
+}
+#infoh1{
+    font-size: 45px;
+    padding: 20px 0 0 20px;
+    margin: 0;
+    color: #fff;
+}
+#infop{
+    font-size: 18px;
+    padding:  0 20px 20px 20px;
+    margin: 0;
+    color: #b5b5b5;
+}
+
+
+
+
+
+
+
+.slide-in-right {
+	-webkit-animation: slide-in-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+ @-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+  .scale-in-center {
+	-webkit-animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
